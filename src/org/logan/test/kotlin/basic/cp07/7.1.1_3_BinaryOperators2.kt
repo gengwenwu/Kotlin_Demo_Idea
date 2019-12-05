@@ -11,11 +11,11 @@ import org.logan.test.kotlin.basic.cp07.ext.Point
  */
 
 operator fun Point.times(scale: Double): Point { // double类型
-
     return Point((x * scale).toInt(), (y * scale).toInt())
 }
 
-operator fun Double.times(p: Point): Point {
+// 从这个函数可以看出，和普通的函数一样，可以重载 operator函数: 可以定义多个同名的，但参数类型不同的方法。
+operator fun Double.times(p: Point): Point { // 支持交换性
     return Point((this * p.x).toInt(), (this * p.y).toInt())
 }
 
