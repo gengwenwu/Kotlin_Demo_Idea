@@ -11,8 +11,8 @@ package org.logan.test.kotlin.basic.cp07
 
 data class Point(val x: Int, val y: Int) {
 
-    // 关键字operator，用于重载运算符的所有 函数都需要用该关键字标记。
-    operator fun plus(other: Point): Point { // 定义一个名为plus的方法，
+    // 关键字operator，用于重载运算符的所有函数都需要用该关键字标记。
+    operator fun plus(other: Point): Point { // 定义一个名为plus的方法，，即 +
         return Point(x + other.x, y + other.y)
     }
 }
