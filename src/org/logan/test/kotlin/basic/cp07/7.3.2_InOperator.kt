@@ -1,9 +1,9 @@
 package org.logan.test.kotlin.basic.cp07
 
 /**
- * desc: “in”运算符的约定 <br/>
+ * desc: “in”运算符的约定: contains() <br/>
  * in运算符，用于检查某个对象是否属于集合。相应的函数叫作contains()。
- * a in c ->  c.contains(a)
+ * a in c -->  c.contains(a)
  *
  * time: 2019/12/12 5:20 下午 <br/>
  * author: Logan <br/>
