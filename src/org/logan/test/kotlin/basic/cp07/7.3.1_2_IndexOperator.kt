@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp07
 
 /**
- * desc: 通过下标来访问元素：“set” <br/>
+ * desc: 通过下标来设置元素：“set” <br/>
  * time: 2019/12/12 2:50 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
