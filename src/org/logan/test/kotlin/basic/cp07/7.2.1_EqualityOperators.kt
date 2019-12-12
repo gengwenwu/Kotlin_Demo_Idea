@@ -5,7 +5,7 @@ package org.logan.test.kotlin.basic.cp07.ext2
  *
  * 和所有其它运算符不同的是，== 和 != 可以用于可空运算数，因为这它会检查运算数是否为null。
  * 比较 a == b 会检查a是否为非空，如果不是，就调用 a.equals(b); 否则，只有两个参数都是空引用，结果才是true。
- * 如：a==b -> a?.equals(b) ?: (b==null)
+ * 如：a==b 解释为：a?.equals(b) ?: (b==null)
  *
  * Kotlin恒等运算符(===) 与 Java中的==运算符是完全相同的：
  *   检查两个参数是否是同一个对象的引用(如果是基本数据类型，检查它们是否是相同的值)。

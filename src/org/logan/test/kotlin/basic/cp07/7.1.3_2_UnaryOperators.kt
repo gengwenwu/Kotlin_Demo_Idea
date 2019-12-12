@@ -8,6 +8,8 @@ import java.math.BigDecimal
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
+
+// inc() 递增
 operator fun BigDecimal.inc() = this + BigDecimal.ONE
 
 fun main() {
