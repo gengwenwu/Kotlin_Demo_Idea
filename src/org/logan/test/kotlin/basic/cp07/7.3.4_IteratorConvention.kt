@@ -3,7 +3,7 @@ package org.logan.test.kotlin.basic.cp07
 import java.time.LocalDate
 
 /**
- * desc: in约定，使用Iterator <br/>
+ * desc: in运算符的约定：调用 iterator() <br/>
  * 第二章，在 Kotlin中，for循环中也可以使用in运算符，和做区间检查一样。但是在这里情况下它的含义是不同的: 它被用来执行迭代。
  * 这意味着一个诸如 for(x in list) {...} 将被转换成 list.iterator ()的调用，
  * 然后就像在 Java 中一样，在它上面重复调用 hasNext 和 next 方法 。
@@ -13,7 +13,7 @@ import java.time.LocalDate
  * since V 1.0 <br/>
  */
 fun main() {
-    // 请注意，在 Kotlin 中，in这也是一种约定，这意味着 iterator 方法可以被定义为扩展函数。
+    // 请注意，在 Kotlin 中，in这也是一种约定，这意味着 iterator()可以被定义为扩展函数。
     // 这就解释了为什么可以遍历一个常规的 Java字符串: 标准库已经为 CharSequence 定义了一个扩展函数 iterator，而它是String 的父类：
     for (c in "abc") {
         println(c)
