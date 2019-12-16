@@ -10,6 +10,7 @@ import java.time.LocalDate
  *
  * rangeTo()返回一个区间。你可以为自己的类定义这个运算符。但是，如果该类实现了 Comparable 接口，那么不需要这么做了：
  * 你可以通过 Kotlin 标准库创建一个任意可比较元素的区间，这个库定义了可以用于任何可比较元素的 rangeTo():
+ * 
  * operator fun <T: Comparable<T>> T.rangeTo(that: T): ClosedRange<T> // 这个函数返回一个区间，可以用来检测其他一些元素是否属于它。
  *
  * time: 2019/12/12 5:35 下午 <br/>

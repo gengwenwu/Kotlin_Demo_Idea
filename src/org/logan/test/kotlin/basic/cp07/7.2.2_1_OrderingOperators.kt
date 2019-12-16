@@ -38,7 +38,7 @@ class Person(
 fun main() {
     val p1 = Person("Alice", "Smith")
     val p2 = Person("Bob", "Johnson")
-    println(p1 < p2) //因为Person实现了Comparable接口，所以可以使用类似<比较两个对象
+    println(p1 < p2) //因为Person实现了Comparable接口，所以可以使用类似<比较两个对象，实际调用compareTo()函数
 
 
     // 所有 Java中实现了Comparable接口的类，都可以在 Kotlin中使用简洁的运算符语法，不用再增加扩展函数:
