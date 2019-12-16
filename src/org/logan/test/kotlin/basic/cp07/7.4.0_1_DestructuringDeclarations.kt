@@ -19,7 +19,7 @@ fun main() {
     println("x=${x}, y=${y}")
 
 
-    // 对于数据类（如：上面的Point），编译器为每个在主构造方法中声明的属性生成一个componentN()，
+    // 对于数据类（如：上面的Point），编译器为每个在 主构造方法 中声明的属性生成一个componentN()，
     // 下面的例子显示了如何手动为 非数据类 声明这些功能:
     // class Point(val x: Int, val y: Int) {
     //      operator fun component1() = x

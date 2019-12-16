@@ -14,7 +14,7 @@ fun printEntries(map: Map<String, String>) {
     }
 
     // 上面例子用到了两个 Kotlin 约定 : 一个是迭代一个对象：in，另一个是用于解构声明：(key, value)。
-    // Kotlin 标准库给 map 增加了一个扩展的 iterator 函数，用来返回 map 条目的法代器。因此，与 Java 不同的是，可以直接送代 map。
+    // Kotlin 标准库给 map 增加了一个扩展的 iterator 函数，用来返回 map 条目的迭代器。因此，与Java不同的是，可以直接送代map。
     // 它还包含 Map. Entry上的扩展函数 component1 和 component2，分别返回它的键和值。实际上，前面的循环被转换成了这样的代码:
     for (entry in map.entries){
         val key = entry.component1()
