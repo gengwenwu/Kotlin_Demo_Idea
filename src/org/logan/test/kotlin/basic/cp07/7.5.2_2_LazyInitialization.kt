@@ -27,7 +27,7 @@ class Person(val name: String) {
 }
 
 fun main() {
-    val p = org.logan.test.kotlin.basic.cp07.ext7521.Person("Alice")
+    val p = Person("Alice")
     p.emails
     p.emails // 第二次访问没有初始化数据
 }
