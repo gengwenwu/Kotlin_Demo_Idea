@@ -5,6 +5,8 @@ import java.beans.PropertyChangeSupport
 
 /**
  * desc: 实现委托属性 - PropertyChangeSupport、PropertyChangeListener <br/>
+ *       优化见：7.5.3_2_ImplementingDelegatedProperties.kt
+ *
  * time: 2019/12/16 2:54 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>

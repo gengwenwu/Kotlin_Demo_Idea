@@ -7,8 +7,11 @@ import java.beans.PropertyChangeSupport
  * desc: 实现委托属性 - PropertyChangeSupport、PropertyChangeListener <br/>
  *       通过辅助类ObservableProperty来实现属性变化的通知。
  *
- *       下面代码看完之后，你就知道委托属性是如何工作的：你创建了一个保存属性值的类(ObservableProperty)，并在修改属性时自动触发更改通知。
- *       你删除了重复的逻辑代码，但是需要相当多的样板代码来为每个属性创建 ObservableProperty 实例， 井把getter和setter委托给它。
+ *       下面代码看完之后，你就知道委托属性是如何工作的：你创建了一个保存属性值的类(ObservableProperty)，
+ *       并在修改属性时自动触发更改通知。你删除了重复的逻辑代码，但是需要相当多的样板代码来为每个属性创建
+ *       ObservableProperty 实例， 井把getter和setter委托给它。
+ *
+ *       优化见：7.5.3_3_ImplementingDelegatedProperties.kt
  *
  * time: 2019/12/16 3:45 下午 <br/>
  * author: Logan <br/>
