@@ -24,6 +24,6 @@ package org.logan.test.kotlin.basic.cp07
 //        set(value: Type) = <delegate>.setValue(this, <property>, value)
 // }
 
-//3，在每个属性访问器中，编译器都会生成对应的 getValue 和 setValue 方法
+// 3，在每个属性访问器中，编译器都会生成对应的 getValue 和 setValue 方法
 // val x = c.prop  -->  val x = <delegate>.getValue(c, <property>)
 // c.prop          -->  <delegate>.setValue(c, <property>, x)
