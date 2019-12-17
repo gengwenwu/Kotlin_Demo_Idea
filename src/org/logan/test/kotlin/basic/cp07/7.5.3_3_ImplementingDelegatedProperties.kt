@@ -8,6 +8,8 @@ import kotlin.reflect.KProperty
  * desc: 实现委托属性 - PropertyChangeSupport、PropertyChangeListener <br/>
  *       优化 ObservableProperty，并使用by关键字
  *
+ *       优化见：7.5.3_4_ImplementingDelegatedProperties.kt
+ *
  * time: 2019/12/16 6:51 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
