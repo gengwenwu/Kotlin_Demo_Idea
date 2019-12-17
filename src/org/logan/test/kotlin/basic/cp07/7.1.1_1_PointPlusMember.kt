@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp07
 
 /**
- * desc: 重载二元算术运算，plus -》 + <br/>
+ * desc: 重载二元算术运算，plus() --> + <br/>
  *       把运算符定义在类成员内部。
  *
  * time: 2019/12/4 4:17 PM <br/>

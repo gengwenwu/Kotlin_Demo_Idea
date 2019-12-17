@@ -2,7 +2,7 @@ package org.logan.test.kotlin.basic.cp07
 
 /**
  * desc: 重载 复合赋值运算符(+=、-=) <br/>
- * 当定义像 plus 这样的运算符函数时，Kotlin不止支持+号运算，也支持+=，即：复合赋值运算符。
+ *       当定义像 plus 这样的运算符函数时，Kotlin不止支持+号运算，也支持+=，即：复合赋值运算符。
  *
  * time: 2019/12/5 3:24 PM <br/>
  * author: Logan <br/>
