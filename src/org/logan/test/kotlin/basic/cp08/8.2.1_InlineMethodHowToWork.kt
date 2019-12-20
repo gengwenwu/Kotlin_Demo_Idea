@@ -1,4 +1,4 @@
-package org.logan.test.kotlin.basic.cp08
+package org.logan.test.kotlin.basic.cp08.ext821
 
 import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
@@ -9,6 +9,8 @@ import java.util.concurrent.locks.ReentrantLock
  *
  * 如果使用 inline 修饰符标记一个函数，在函数被使用的时候编译器并不会生成函数调用的代码，
  * 而是使用函数实现的真实代码替换每一次的函数调用。
+ *
+ * 内联函数解决lambda性能问题，即：非内联函数，在使用lambda的时候，编译器会生成匿名类处理。
  *
  * time: 2019/12/20 2:06 下午 <br/>
  * author: Logan <br/>
