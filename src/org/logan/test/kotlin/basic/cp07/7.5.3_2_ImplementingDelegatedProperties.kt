@@ -33,7 +33,7 @@ open class PropertyChangeAware {
     }
 }
 
-// 通过辅助类ObservableProperty来实现属性变化的通知
+// 优化1，通过辅助类ObservableProperty来实现属性变化的通知
 class ObservableProperty(
     val propName: String, var propValue: Int,
     val changeSupport: PropertyChangeSupport
@@ -48,7 +48,7 @@ class ObservableProperty(
 }
 
 class Person(val name: String, age: Int, salary: Int) : PropertyChangeAware() {
-    val _age = ObservableProperty("age", age, changeSupport) // 使用ObservableProperty辅助类
+    val _age = ObservableProperty("age", age, changeSupport) //  优化2，使用ObservableProperty辅助类
     val _salary = ObservableProperty("salary", salary, changeSupport)
 
     var age: Int

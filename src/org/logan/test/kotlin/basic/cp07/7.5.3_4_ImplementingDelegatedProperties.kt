@@ -34,12 +34,12 @@ class Person(
     val name: String, age: Int, salary: Int
 ) : PropertyChangeAware() {
 
-    // 改进一，使用表达式
+    // 改进1，使用表达式
     private val observer = { prop: KProperty<*>, oldValue: Int, newValue: Int ->
         changeSupport.firePropertyChange(prop.name, oldValue, newValue)
     }
 
-    // 改进二，使用Delegates.observable()
+    // 改进2，使用Delegates.observable()
     // by 右边的表达式不一定是新创建的实例，也可以是函数调用、另一个属性或任何其他表达式，只要这个表达式的值，
     // 是能够被编译器用正确的参数类型来调用 getValue 和 setValue 的对象。
     // 与其他约定一样， getValue 和 setValue 可以是对象自己声明的方法或扩展函数。
