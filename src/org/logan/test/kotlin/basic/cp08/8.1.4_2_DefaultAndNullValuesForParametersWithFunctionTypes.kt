@@ -22,7 +22,7 @@ fun <T> Collection<T>.joinToString2(
     for ((index, element) in this.withIndex()) {
         if (index > 0) result.append(separator)
 
-        val str = transform?.invoke(element) // 2，使用安全调用语法调用函数
+        val str = transform?.invoke(element) // 2，使用安全调用语法调用函数 invoke()
             ?: element.toString() // 使用 elvis 运算符
         result.append(str) //
     }
