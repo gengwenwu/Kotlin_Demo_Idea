@@ -19,7 +19,7 @@ package org.logan.test.kotlin.basic.cp08.ext822
 
 // 如下例：map 函数没有直接调用作为 transform 参数传递进来的函数。而是将这个函数传递给一个类的构造方法，
 // 构造方法将它保存在一个属性中。为了支持这一点，作为 transform 参数传递的 lambda 需要被编译成标准的非内联的表示法，
-// 即一个实现了函数接口的医名类。
+// 即：一个实现了函数接口的医名类。如下例：
 fun <T, R> Sequence<T>.map(transform: (T) -> R): Sequence<R> {
     return TransformingSequence1(this, transform)
 }
