@@ -7,7 +7,7 @@ import org.logan.test.kotlin.basic.cp08.ext8311.people
  * desc: 从 lambda 返回：使用标签返回，即：局部返回<br/>
  *
  *       局部返回的语法相当冗长，如果一个 lambda包含多个返回语句会变得更加笨重。
- *       解决方案是，可以使用另一种可选的语法来传递代码块: 匿名函数。见下一个代码文件。
+ *       解决方案是，可以使用另一种可选的语法来传递代码块: 匿名函数。见 8.3.3_AnonymousFunctions.kt。
  *
  * time: 2020/1/6 4:10 下午 <br/>
  * author: Logan <br/>
