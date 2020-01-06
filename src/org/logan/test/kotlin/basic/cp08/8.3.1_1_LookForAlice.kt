@@ -1,10 +1,11 @@
 package org.logan.test.kotlin.basic.cp08.ext8311
 
 /**
- * desc: lambda 中的return语句：从一个封闭的函数返回 <br/>
+ * desc: lambda 中的return语句：从一个封闭的函数返回，这样的 return语句叫作"非局部返回" <br/>
  *
  * 需要注意的是，只有在以 lambda 作为参数的函数是内联函数的时候才能从更外层的函数返回。
  * 在一个非内联函数的 lambda 中使用 return 表达式是不允许的。
+ *
  * time: 2020/1/6 3:47 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -19,6 +20,7 @@ fun main() {
     lookForAliceUseForEach(people)
 }
 
+// 普通遍历使用return
 fun lookForAlice(people: List<Person>) {
     for (person in people) {
         if (person.name == "Alice") {
@@ -30,7 +32,7 @@ fun lookForAlice(people: List<Person>) {
     println("Alice is not found") // 没有找到Alice，打印这一行
 }
 
-// 在传递给 forEach 的 lambda 中使用 return，效果和上面的lookForAlice()实现效果一样
+// 在传递给 forEach 的 lambda 中使用 return，实现效果和上面的lookForAlice()实现效果一样
 fun lookForAliceUseForEach(people: List<Person>) {
 
     people.forEach {
