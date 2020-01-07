@@ -4,9 +4,9 @@ import org.logan.test.kotlin.basic.cp08.ext8311.Person
 import org.logan.test.kotlin.basic.cp08.ext8311.people
 
 /**
- * desc: 从 lambda 返回：使用标签返回，即：局部返回<br/>
+ * desc: 从 lambda 返回：使用标签返回，即：局部返回 <br/>
  *
- *       局部返回的语法相当冗长，如果一个 lambda包含多个返回语句会变得更加笨重。
+ *       局部返回的语法相当冗长，如果一个 lambda 包含多个返回语句会变得更加笨重。
  *       解决方案是，可以使用另一种可选的语法来传递代码块: 匿名函数。见 8.3.3_AnonymousFunctions.kt。
  *
  * time: 2020/1/6 4:10 下午 <br/>
@@ -23,15 +23,15 @@ fun main() {
 
 fun lookForAlice(people: List<Person>) {
     /**
-     * lambda中的局部返回跟 for循环中的 break表达式相似。它会终止 lambda的执行，并接着从调用 lambda的代码处执行。
-     * 要区分局部返回和非局部返回，要用到标签。
-     * 想从一个 lambda 表达式处返回你可以标记它，然后在 return 关键字后面引用这个标签，如下：
+     * lambda中的局部返回跟 for 循环中的 break 表达式相似。它会终止 lambda的执行，并接着从调用 lambda的代码处执行。
+     * 要区分局部返回和非局部返回，就要用到标签。
+     * 想从一个 lambda 表达式处返回你可以标记它，然后在 return关键字后面引用这个标签，如下：
      **/
     // 给lambda表达式声明标签：label@
     people.forEach label@{
         if (it.name == "Alice") {
             println("Found!")
-            return@label // return@label引用了这个标签
+            return@label // return@label 引用了这个标签，返回到调用lambda的代码处
         }
     }
 
