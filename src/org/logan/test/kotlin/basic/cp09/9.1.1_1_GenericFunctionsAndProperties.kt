@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp09
 
 /**
- * desc: 泛型函数和属性 <br/>
+ * desc: 泛型函数 <br/>
  *  在 Java 中，可以声明 List 类型的变量，而不需要说明它可以包含哪种类型。
  *  但是，Kotlin 始终要求类型实参要么被显式地说明，要么能被编译器推导出来，不能随意省略。
  *
