@@ -14,7 +14,7 @@ package org.logan.test.kotlin.basic.cp09
  */
 fun main() {
 
-    // Kotlin编译器能够根据参数值推导出类型实参
+    // Kotlin编译器根据参数值推导出类型
     val authors = listOf("David", "Alice") // 两个值都是字符串，编译器推导出正在创建一个List<String>
 
 

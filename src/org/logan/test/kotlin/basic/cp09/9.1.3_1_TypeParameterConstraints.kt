@@ -2,12 +2,12 @@ package org.logan.test.kotlin.basic.cp09
 
 /**
  * desc: 类型参数约束 <br/>
- *       类型参数约束可以限制作为 (泛型)类 和(泛型)函数 的类型实参的类型。
+ *       类型参数约束可以限制作为 (泛型)类 和 (泛型)函数 的类型实参的类型。
  *
  * 如果把一个类型指定为泛型类型形参的 上界约束，在泛型类型具体的初始化中，其对应的类型实参就必须是这个具体类型或者它的子类型。
  * 语法类似如下：
  *
- *      fun <T : Number> List<T>.sum(): T { ... } // Number就是上界，Java中用的是关键字 extends 来表达同样的概念。
+ *      fun <T : Number> List<T>.sum(): T { ... } // Number是T数据类型的上界，Java用 extends 来表达同样的概念。
  *      println(listOf(1, 2, 3).sum()) // 1、2、3，Int类型继承了Number类。
  *
  * time: 2020/1/7 1:46 下午 <br/>
@@ -36,13 +36,13 @@ fun <T> ensureTrailingPeriod(seq: T) where T : CharSequence, T : Appendable {
 
 fun main() {
     // oneHalf()测试
-    val intValue = 3
+    val intValue = 3 // int类型
     println(oneHalf(intValue))
 
-    val numberValue: Number = 2
+    val numberValue: Number = 2 // number类型
     println(oneHalf(numberValue))
 
-    val doubleValue = 3.4
+    val doubleValue = 3.4 // double类型
     println(oneHalf(doubleValue))
 
 
