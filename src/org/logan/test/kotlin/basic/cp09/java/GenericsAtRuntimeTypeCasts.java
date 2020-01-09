@@ -16,4 +16,8 @@ class GenericsAtRuntimeTypeCasts {
 		List<Integer> list = (List<Integer>) c;
 	}
 
+	public static void main(String[] args) {
+		// Java中无法调用 reified 函数
+		// _9_2_2_DeclaringFunctionsWithReifiedTypeParametersKt.isA()
+	}
 }
