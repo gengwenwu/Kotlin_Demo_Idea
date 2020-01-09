@@ -3,14 +3,14 @@ package org.logan.test.kotlin.basic.cp09
 /**
  * desc: 让类型形参非空 <br/>
  *       没有指定上界的类型形参将会使用 Any?，这个是默认的上界。
- *       此时的范型T可能为null。
+ *       此时的范型T 可能为null。
  *
  * time: 2020/1/8 2:57 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
 
-class Processor<T> { // 但是这里的T是可空的，因为默认T继承Any?
+class Processor<T> { // 但是这里的T 是可空的，因为默认T 继承Any?
 
     fun process(value: T) {
         // value.hashCode() // value是可空的，这样调用可能导致空指针
@@ -29,9 +29,9 @@ class Processor2<T : Any> { // 指定非"空"上届，约束<T : Any>确保了�
 
 
 fun main() {
-    val nullableStringProcessor = Processor<String?>() // 可空类型String?代替T
+    val nullableStringProcessor = Processor<String?>() // 可空类型String? 代替T
     nullableStringProcessor.process(null) // 使用null作为value实参的代码可以编译
-    // val nullableStringProcessor2 = Processor2<String?>() // String?编译报错，只能接受非空，即：String
+    // val nullableStringProcessor2 = Processor2<String?>() // String? 编译报错，只能接受非空，即：String
 
 }
 
