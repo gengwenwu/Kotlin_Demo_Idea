@@ -16,8 +16,8 @@ import java.util.*
 fun main() {
     // 使用标准的 ServiceLoader Java API 加载一个服务
     val serviceImpl = ServiceLoader
-        .load(Service::class.java) // ::class.java语法展现了如何获取 java.lang.Class对应的 Kotlin类，
-    //                                这和 Java中 的 Service.class是完全等同的。
+        .load(Service::class.java) // ::class.java 语法展现了如何获取 java.lang.Class 对应的 Kotlin 类，
+    //                                这和 Java 中的 Service.class 是完全等同的。
 
     // 优化
     val serviceImpl2 = loadService<Service>()

@@ -8,7 +8,7 @@ package org.logan.test.kotlin.basic.cp09
  * since V 1.0 <br/>
  */
 
-// 声明一个范型扩展函数，下面slice() 的类型形参为 T
+// 声明一个范型扩展函数，下面 slice() 的类型形参为 T
 // 声明类型形参：第一个<T>
 // 接收者类型参数：第二个<T>
 // 返回类型参数：第三个<T>
