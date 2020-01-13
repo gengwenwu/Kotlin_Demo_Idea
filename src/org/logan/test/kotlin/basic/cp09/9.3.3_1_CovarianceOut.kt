@@ -30,7 +30,7 @@ class Herd<out T : Animal> { // 使用out，将 T 声明可协变的
 
     val size: Int get() = animals.size
 
-    fun get(i: Int): T = animals[i]
+    fun get(i: Int): T = animals[i] // 把 T 作为返回值使用
 }
 
 fun feedAll(animals: Herd<Animal>) { // 类型参数没有声明协变的
@@ -52,7 +52,5 @@ fun takeCareOfCate(cats: Herd<Cat>) {
     }
 }
 
-// 不能把任何类都变成协变的:这样不安全。
-// 让类在某个类型参数变为协变，限制了该类中对该类型参数使用的可能性。
-// 要保证类型安全，它只能用在所谓的 out位置，意味着这个类只能生产类型 T 的值而不能消费它们。
+
 
