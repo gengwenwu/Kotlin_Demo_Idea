@@ -19,8 +19,9 @@ package org.logan.test.kotlin.basic.cp09.ext932
 
 
 // 为了讨论类型之间的关系，需要熟悉子类型这个术语。
-// 任何时候如果需要的是类型 A 的值，你都能够使用类型 B 的值 (当作 A的值)，类型 B 就称为类型 A 的子类型。譬如：
-// Int 是 Number 的子类型，但 Int 不是 String 的子类型。这个定义还表明了任何类型都可以被认为是它自己的子类型。
+// 任何时候，如果需要的是类型 A 的值，你都能够使用类型 B 的值 (当作 A的值)，类型 B 就称为类型 A 的子类型。譬如：
+// Int 是 Number 的子类型，但 Int 不是 String 的子类型。
+// 这个定义还表明了任何类型都可以被认为是它自己的子类型。
 
 // 术语 超类型 是子类型的反义词，如果 A 是 B 的子类型，那么 B 就是 A 的超类型。
 
@@ -39,7 +40,7 @@ fun test(i: Int) {
 
 // 可空类型提供了一个例子，
 // 说明子类型和子类不是同一个事物： 非空类型 A 是可空的 A? 的子类型，但反过来却不是。
-// 你不能将A?赋值给A类型，但它们都对应着同一个类。
+// 你不能将 A? 赋值给 A 类型，但它们都对应着同一个类。
 fun test2() {
     val s: String = "abc"
     val t: String? = s // 赋值合法，因为 String 是 String? 子类型
@@ -48,7 +49,7 @@ fun test2() {
 
 // 当我们开始涉及泛型类型时，子类型和子类之间的差异显得格外重要。
 // 把 List<String> 类型的变量传给期望 List<Any> 的函数是否安全？现在可以使用子类型化术语来重新组织:
-// MutableList<String> 是 MutableList<Any> 子类型吗？List<String> 是 List<Any> 的子类型吗?
+// List<String> 是 List<Any> 的子类型吗? MutableList<String> 是 MutableList<Any> 子类型吗？
 // 其实都不是！但是对于 List 来说，子类型化规则不一样。 Kotlin 中的 List 接口表示的是只读集合。
 // 如果 A 是 B 的子类型，那么 List<A> 就是 List<B> 的子类型。这样的类或者接口被称为协变的。后面章节会细讲。
 
