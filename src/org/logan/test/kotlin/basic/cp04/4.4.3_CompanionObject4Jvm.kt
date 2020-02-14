@@ -12,7 +12,7 @@ package org.logan.test.kotlin.basic.cp04
 class Annotation {
     /**
      * 伴身对象中的变量 <br/>
-     * 1，name属于AnnotationField类，private static <br/>
+     * 1，name属于Annotation类，private static <br/>
      * 2，仅Companion 提供了name的getter和setter <br/>
      **/
     companion object {
@@ -22,8 +22,8 @@ class Annotation {
 
 /**
  * 使用@JvmStatic <br/>
- * 1，name属于AnnotationField类，private static <br/>
- * 2，AnnotationField、Companion 都提供了name的getter和setter <br/>
+ * 1，name属于AnnotationJvmStatic类，private static <br/>
+ * 2，AnnotationJvmStatic、Companion 都提供了name的getter和setter <br/>
  **/
 class AnnotationJvmStatic {
     companion object {
