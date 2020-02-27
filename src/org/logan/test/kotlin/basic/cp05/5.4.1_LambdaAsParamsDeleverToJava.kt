@@ -73,7 +73,7 @@ fun handleComputation(id: String) {
 fun showObjectMemoryAddress() {
 //    for (i in 1..3) {
 //        postponeComputation(1000) {
-//            println("Lambda方式 1：" + this) // 1，lambda内部没有匿名对象那样的this
+//            println("Lambda方式 1：" + this) // 1，lambda内部没有匿名对象那样的this，这个this会报错。
 //        }
 //    }
 
