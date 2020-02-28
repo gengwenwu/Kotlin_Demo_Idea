@@ -1,7 +1,7 @@
 package org.logan.test.kotlin.basic.cp06
 
 /**
- * desc: Elv厄运算符: ?: <br/>
+ * desc: Elvis运算符: ?: <br/>
  * 它是用来代替 null 的默认值，它像猫王Elvis，因此称之为Elvis运算符。它接受两个运算符：<br/>
  * 如果第一个运算数不为null，运算结果就是第一个运算数；如果第一个运算数为 null，运算结果就是第二个运算数。
  *
