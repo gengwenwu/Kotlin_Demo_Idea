@@ -2,7 +2,7 @@ package org.logan.test.kotlin.basic.cp06
 
 /**
  * desc: 数字转换 - 字符串转换 <br/>
- * Kotlin 标准库提供了一套相似的扩展方法，用来把字符串转换成基本数据类型( toint、 toByte、 toBoolean 等)
+ * Kotlin 标准库提供了一套相似的扩展方法，用来把字符串转换成基本数据类型( toInt、 toByte、 toBoolean 等)
 
  * time: 2019-11-27 14:18 <br/>
  * author: Logan <br/>
