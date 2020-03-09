@@ -3,7 +3,7 @@ package org.logan.test.kotlin.basic.cp09.ext9332
 import org.logan.test.kotlin.basic.cp09.Animal
 
 /**
- * desc: 协变 -- in 和 out <br/>
+ * desc: 协变out 和 逆变in<br/>
  *
  * 不能把任何类都变成协变的:这样不安全。
  * 让类在某个类型参数变为协变，限制了该类中对该类型参数使用的可能性。

@@ -30,7 +30,7 @@ interface Function1<in P, out R> { // 用 in 标记的 p (参数类型) 只用�
     operator fun invoke(p: P): R
 }
 
-fun enumerateCats(f: (Cat) -> Number) {
+fun enumerateCats(f: (Cat) -> Number) { // 参数f的数据类型是上面的Function1
     // do something
 }
 
@@ -48,8 +48,8 @@ fun main() {
 
 
     // 在Kotlin中这段代码是合法的，因为Animal是Cat的超类型，而Int是Number的子类型。
-    // 函数 (P)  -> Int R 在它的参数类型上逆变，而在返回类型上协变。
-    enumerateCats(Animal::getIndex) // TODO 待理解
+    // 函数 (P) -> R ，P在它的参数类型上逆变，R在返回类型上协变。
+    enumerateCats(Animal::getIndex)
 
 }
 
