@@ -3,7 +3,7 @@ package org.logan.test.kotlin.basic.cp09
 /**
  * desc: 使用点变型：在类型出现的地方指定变型，使用点变型有助于放宽可接收的类型的范围。 <br/>
  *
- * 在类声明的时候就能够指定变型修饰符是很方便的，因为这些修饰符会应用到所有类被使用的地方。这被称作 声明点变型。
+ * 在类声明的时候就可以指定变型修饰符是很方便的，因为这些修饰符会应用到所有类被使用的地方。这被称作 声明点变型。
  * Java的通配符类型 (? extends 和 ? super)，每一次使用带类型参数的类型的时候，
  * 还可以指定这个类型参数是否可以用它的 子类型或者超类型替换。这叫作 使用点变型。
  * // Java代码
@@ -11,7 +11,7 @@ package org.logan.test.kotlin.basic.cp09
  *     <R> Stream<R> map(Function<? super T, ? extends R> mapper);
  * }
  *
- * Kotlin 也支持使用点变型，允许在类型参数出现的具体位置指定变型，即使在类型声明时它不能被声明成协变或逆变的
+ * Kotlin 也支持使用点变型，允许在类型参数出现的具体位置指定变型，即使在类型声明时它不能被声明成协变或逆变的地方。
  *
  * 注意：Kotlin 使用点变型直接对应 Java 的限界通配符。
  * Kotlin 中的 MutableList<out T> 和 Java 中的 MutableList<? extends T> 是一个意思。
@@ -42,14 +42,14 @@ fun <T : R, R> copyData( // 修改点：使用两个范型，其中 T 继承 R
 
 // Kotlin 提供了一种更优雅的表达方式1：使用out
 fun <T> copyDataOut(
-    source: MutableList<out T>, // 修改点：使用out：参数source只能使用T在out位置上的函数，允许source元素类型是destination元素类型的子类型
+    source: MutableList<out T>, // 修改点：使用out：参数source只能使用T在out位置上的函数，即：允许source元素类型是destination元素类型的子类型
     destination: MutableList<T>
 
     // 可以为类型声明中，类型参数任意的用法指定变型修饰符(in、out)，这些用法包括：形参类型(就像 9.3.3_1_CovarianceOut.kt)、
     // 局部变量类型、函数返回类型，等等。这里发生的一切被称作 类型投影：我们说 source 不是一个常规的 MutableList，
     // 而是一个投影(受限)的 MutableList。
     // 只能调用返回类型是泛型类型参数的那些方法，或者严格地讲，只在 out 位置使用它的方法。
-    // 编译器禁止调用使用类型参数做实参 (类型)的那些方法(在扫位置使用类型参数):
+    // 编译器禁止调用使用类型参数做实参 (类型)的那些方法 (即：在in位置使用类型参数的方法):
     // val list: MutableList<out Number> = ...
     // list.add(42) // 编译报错
     // Error：out projected type 'MutableList<out Number>' prohibits the use of 'fun add(element: E): Boolean'
