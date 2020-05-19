@@ -1,5 +1,8 @@
 package org.logan.test.kotlin.org.docs.functions
 
+import org.logan.test.kotlin.basic.cp02.Person
+
+
 /**
  * desc: Scope Functions - 作用域函数 <br/>
  *       Kotlin提供了5个作用域函数，let、run、with、apply、also，它们的唯一目的是在对象的上下文中执行代码块。 <br/>
@@ -87,3 +90,23 @@ fun showWithFunctionUseCase() {
     println(firstAndLast)
 }
 
+
+fun showRunFunctionUseCase() {
+    // run 和 with 做同样的事情，但是调用方式和 let一样(扩展函数)
+
+    // 当 lambda 表达式同时包含对象初始化和返回值的计算时，run 很有用。
+    val person = Person("Logan", true)
+    val runResult = person.run {
+        isMarried = false
+        "runResult "
+    }
+    println(runResult)
+
+    // 同样的代码如果用 let() 函数来写:
+    val letResult = person.let {
+        it.isMarried = false
+        "letResult"
+    }
+    println(letResult)
+
+}
