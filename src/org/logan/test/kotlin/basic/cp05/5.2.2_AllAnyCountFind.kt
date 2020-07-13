@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     println(people.all(canBeInClub27)) // 输出false
 
 
-    // all()：只要有一个条件满足即可
+    // any()：只要有一个条件满足即可
     println(people.any(canBeInClub27)) // 输出true
 
 
