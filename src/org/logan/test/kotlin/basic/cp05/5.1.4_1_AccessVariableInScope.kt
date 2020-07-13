@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
     val errors = listOf("403 Forbidden", "404 Not Found")
     printMessageWithPrefix(errors, "Errors:")
 
-    // lambda中改访问外部变量
+    // lambda中修改外部变量
     val responses = listOf("200 OK", "418 I'm a teapot", "500 Internal server Error")
     printProblemCounts(responses)
 
