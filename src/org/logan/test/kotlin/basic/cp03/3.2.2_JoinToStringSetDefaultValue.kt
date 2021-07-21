@@ -11,13 +11,15 @@ package org.logan.test.kotlin.basic.cp03
 fun main(args: Array<String>) {
     val list = listOf(1, 7, 53)
 
-    // 当使用常规的调用语法时，必须按照函数声明中定义的参数顺序来给定参数，可以省略掉的只有排在末尾的参数。
-    // 如果使用命名参数，可以省略中间一些参数，也可以按照任意顺序放置参数。
+    // 1, 当使用常规的调用语法时，必须按照函数声明中定义的参数顺序来给定参数，可以省略掉的只有排在末尾的参数。
     println(joinToString2(list))
 
     println(joinToString2(list, "? "))
 
     println(joinToString2(list, "? ", "<", ">"))
+
+    // 2, 如果使用命名参数，可以省略中间一些参数，也可以按照任意顺序放置参数。
+    println(joinToString2(list, postfix = "}", separator = "? "))
 
 }
 
