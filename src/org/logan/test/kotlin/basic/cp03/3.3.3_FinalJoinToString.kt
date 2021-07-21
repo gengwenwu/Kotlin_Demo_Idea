@@ -1,12 +1,12 @@
 package org.logan.test.kotlin.basic.cp03
 
 /**
- * desc: 最终版Collection.joinToString  <br/>
+ * desc: 最终版 Collection.joinToString()  <br/>
  * time: 2019-08-26 16:53 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-fun <T> Collection<T>.joinToString(
+fun <T> Collection<T>.joinToString( // 为 Collection 扩展 joinToString() 函数
     separator: String = ", ",
     prefix: String = " ",
     postfix: String = ""

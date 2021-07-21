@@ -6,7 +6,7 @@ package org.logan.test.kotlin.basic.cp03
 /**
  * desc: Kotlin顶层函数 <br/>
  * 1, 可以代替Java的 Util工具类。<br/>
- * 2, 以文件名 + Kt字符生成java class类。 <br/>
+ * 2, 以文件名 + Kt字符串 生成java class类。 <br/>
  * time: 2019-08-26 15:06 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>

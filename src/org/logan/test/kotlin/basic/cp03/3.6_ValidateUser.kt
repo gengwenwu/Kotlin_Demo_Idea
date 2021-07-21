@@ -24,7 +24,7 @@ fun saveUser1(user: User) {
 }
 
 
-// 提取局部函数来避免重复
+// 优化1：提取局部函数来避免重复
 fun saveUser2(user: User) {
 
     fun validate(user: User, value: String, fieldName: String) {
@@ -40,7 +40,7 @@ fun saveUser2(user: User) {
     // do something
 }
 
-// 在局部函数中访问外层函数的参数
+// 优化2：在局部函数中访问外层函数的参数
 fun saveUser3(user: User) {
     fun validate(value: String, fieldName: String) { // 现在不用在saveUser函数中重复user参数了
         if (value.isEmpty()) {
@@ -51,7 +51,7 @@ fun saveUser3(user: User) {
     // do something
 }
 
-// 提取逻辑到扩展函数
+// 优化3：提取逻辑到扩展函数
 fun saveUser4(user: User) {
     user.validateBeforeSave()
     // do something

@@ -18,5 +18,6 @@ import org.logan.test.kotlin.basic.cp03.lastChar // 1，导入扩展函数
 fun main(args: Array<String>) {
 
     val c = "Kotlin".lastChar()
+    // val c = "Kotlin".last() // 第3种方式
 
 }
